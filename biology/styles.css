@@ -1,0 +1,20 @@
+.box-game1::before {
+    background-image: url('../public/pics/biology/cell\ bio\ quiz.jpeg');
+}
+
+.box-game2::before {
+    background-image: url('../public/pics/biology/clinical\ bio\ back.jpeg');
+}
+
+.box-game5::before {
+    background-image: url('../public/pics/biology/stress.jpg');
+}
+
+.box-game3::before {
+    background-image: url('../public/pics/biology/ecology\ background.jpeg');
+}
+
+.box-game4::before {
+    background-image: url('../public/pics/biology/diseases.jpeg');
+}
+

@@ -1,0 +1,102 @@
+@media (max-width: 700px) {
+    .mobile-warning {
+        padding: 0px 5px;
+        display: block;
+        background-color: #FBE7C6;
+    }
+
+    .main-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .sidebar-left {
+        display: none;
+    }
+
+    .sidebar-right {
+        display: none;
+    }
+
+    .sidebar-right button {
+        width: 7rem;
+        height: 3.5rem;
+    }
+
+    .sidebar-right-scroll {
+        display: none;
+    }
+
+    header {
+        height: 6%;
+        display: flex;
+        justify-content: space-between;
+        padding: 3px;
+    }
+
+    header>div.navbar>h1 {
+        font-size: 20px;
+    }
+
+    header>div:nth-child(2) {
+        display: block;
+    }
+
+    body>header>div:nth-child(2)>h2>a {
+        text-decoration: none;
+        color: #333;
+    }
+
+
+    footer {
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer button {
+        display: block;
+    }
+
+    footer select {
+        width: 6.5rem;
+        height: 3.5rem;
+    }
+
+    footer>div:nth-child(2) {
+        display: none;
+    }
+
+    footer>div:nth-child(3) {
+        display: block;
+    }
+
+
+    button {
+        font-size: small;
+        width: 4rem;
+        height: 3.5rem;
+    }
+
+    #clearInputBtn {
+        display: none;
+    }
+
+    #canvas {
+        width: 90%;
+        height: 95%;
+    }
+}
+
+@media (max-width: 450px) {
+    button {
+        font-size: x-small;
+        width: 3.5rem;
+        height: 2.5rem;
+    }
+    footer select {
+        width: 5rem;
+        height: 2.7rem;
+    }
+}

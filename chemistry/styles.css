@@ -1,0 +1,19 @@
+.box-game1::before {
+    background-image: url('../public/pics/chemistry/elementhangman.jpg');
+}
+
+.box-game2::before {
+    background-image: url('../public/pics/chemistry/molecularmania.jpg');
+}
+
+.box-game3::before {
+    background-image: url('../public/pics/chemistry/oxiquest.jpg');
+}
+
+.box-game4::before {
+    background-image: url('../public/pics/chemistry/solublesolu.jpg');
+}
+
+.box-game5::before {
+    background-image: url('../public/pics/chemistry/');
+}

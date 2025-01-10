@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/media900.css">
+    <link rel="stylesheet" href="./styles/media700.css">
+    <title>Matter Madness</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+</head>
+
+<body>
+    <!-- navbar -->
+    <header>
+        <div class="navbar">
+            <h1>Matter Madness</h1>
+        </div>
+        <div>
+            <h2><a href="https://github.com/Meet7834/Matter-Madness">Github</a></h2>
+        </div>
+    </header>
+    <div class="mobile-warning"><p>The Mobile Version has limited features. Please use desktop version for fun and exciting features.</p></div>
+
+    <!-- main container -->
+    <div class="main-container">
+
+        <!-- left sidebar -->
+        <div class="sidebar-left">
+            <h2>Bodies</h2>
+            <div class="sidebar-left-scroll">
+                <div id="bodiesDiv">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- playground canvas -->
+        <div id="canvas"> </div>
+
+        <!-- right sidebar -->
+        <div class="sidebar-right">
+            <div class="sidebar-right-scroll">
+
+                <h2>Add Body</h2>
+                <div class="align-all-the-items">
+                    <div>
+                        <label for="bodyTypeSelect">Body Type:</label>
+                        <select id="bodyTypeSelect" class="bodyTypeSelect">
+                            <option value="rectangle">Rectangle</option>
+                            <option value="circle">Circle</option>
+                            <option value="polygon">Polygon</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="bodyName">Body Name:</label>
+                        <input type="text" id="bodyName" placeholder="Body Name">
+                    </div>
+
+                    <div>
+                        <label for="xPos">X Position:</label>
+                        <input type="number" id="xPos" placeholder="X Position">
+                    </div>
+
+                    <div>
+                        <label for="yPos">Y Position:</label>
+                        <input type="number" id="yPos" placeholder="Y Position">
+                    </div>
+
+                    <div id="widthInputDiv">
+                        <label for="widthInput">Width:</label>
+                        <input type="number" id="widthInput" placeholder="Width">
+                    </div>
+
+                    <div id="heightInputDiv">
+                        <label for="heightInput">Height:</label>
+                        <input type="number" id="heightInput" placeholder="Height">
+                    </div>
+
+                    <div class="hide" id="sidesInputDiv">
+                        <label for="sidesInput">Sides:</label>
+                        <input type="number" id="sidesInput" placeholder="Sides">
+                    </div>
+
+                    <div class="hide" id="radiusInputDiv">
+                        <label for="radiusInput">Radius:</label>
+                        <input type="number" id="radiusInput" placeholder="Radius">
+                    </div>
+
+                    <div>
+                        <label for="isStaticInput">Static:</label>
+                        <input type="checkbox" id="isStaticInput">
+                    </div>
+
+                </div>
+                <!-- advanced options: angle, friction, firing: on-->
+                <div class="">
+
+                    <div class="align-all-the-items">
+                        <div>
+                            <label for="advancedOptionsInput">Advanced Options</label>
+                            <input type="checkbox" name="advancedOptionsInput" id="advancedOptionsInput">
+                        </div>
+                    </div>
+
+                    <div class="hide align-all-the-items" id="advancedOptionsDiv">
+                        <div>
+                            <label for="fillStyleInput">Color:</label>
+                            <input type="color" id="fillStyleInput" value="#F5D259">
+                        </div>
+                        <div>
+                            <label for="restitutionInput">Restitution: </label>
+                            <input type="number" id="restitutionInput" placeholder="0.1">
+                        </div>
+                        <div>
+                            <label for="angleInput">Angle:</label>
+                            <input type="number" id="angleInput" placeholder="0">
+                        </div>
+                        <div>
+                            <label for="frictionInput">Friction:</label>
+                            <input type="number" id="frictionInput" placeholder="0.1">
+                        </div>
+                        <div>
+                            <label for="frictionAirInput">Air Friction:</label>
+                            <input type="number" id="frictionAirInput" placeholder="0.01">
+                        </div>
+                        <div>
+                            <label for="frictionStaticInput">Static Friction:</label>
+                            <input type="number" id="frictionStaticInput" placeholder="0.5">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="align-all-the-items">
+                <div>
+                    <button id="clearInputBtn">Clear Inputs</button>
+                    <button class="addBodyBtn">Add Body</button>
+                </div>
+            </div>
+            <div class="clearPlaygroundDiv">
+                <button class="clearPlaygroundBtn">Clear Playground</button>
+                <button class="savePlaygroundBtn" id="savePlaygroundBtn">Save Playground</button>
+                <button class="loadPlaygroundBtn" id="loadPlaygroundBtn">Load Playground</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="renderDemoBtn">
+            <button id="renderDemoBtn">Demo</button>
+        </div>
+        <div>
+         
+        </div>
+        <div>
+            <select title="bodyType" id="bodyTypeSelect2" class="bodyTypeSelect">
+                <option value="rectangle">Rectangle</option>
+                <option value="circle">Circle</option>
+                <option value="polygon">Triangle</option>
+            </select>
+        </div>
+        <button class="addBodyBtn">Add Body</button>
+        <button class="clearPlaygroundBtn">Clear</button>
+        <div>
+            <a href="./html/help.html"><button id="helpBtn">Instructions!</button></a>
+        </div>
+    </footer>
+
+    <!-- scripts. NOTE: order of the scripts matters -->
+    <script src="./js/libraries/matter.js"></script>
+    <script src="./js/render/world.js"></script>
+    <script src="./js/render/demo.js"></script>
+    <script src="./js/render/bodiesDiv.js"></script>
+    <script src="./js/utils/utils.js"></script>
+    <script src="./js/utils/eventListners.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+/* CSS File: styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('public/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    /* overflow: hidden; */
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    /* background: rgba(0, 0, 0, 0.7); */
+    color: #fff;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.box {
+    position: relative;
+    height: 200px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7);
+    z-index: 1;
+}
+
+.box-math::before {
+    background-image: url('public/math.jpg');
+}
+
+.box-physics::before {
+    background-image: url('public/physics.jpg');
+}
+
+.box-chemistry::before {
+    background-image: url('public/pics/chemistry/chem.webp');
+}
+
+.box-biology::before {
+    background-image: url('public/biology.jpg');
+}
+
+.box-coding::before {
+    background-image: url('public/coding.jpg');
+}
+
+.box span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s, color 0.3s;
+}
+
+.box:hover span {
+    transform: translate(-50%, -50%) scale(1.1);
+    color: #ffe100;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    /* background: rgba(0, 0, 0, 0.7); */
+    color: #fff;
+    font-size: 1em;
+    margin-top: 30px;
+}

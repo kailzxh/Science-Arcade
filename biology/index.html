@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biology Games</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+    /* margin: 0;
+    font-family: Arial, sans-serif; */
+    background: url('../public/biology.jpg') no-repeat center center fixed;
+    background-size: cover;
+    /* overflow: hidden; */
+}
+        
+        .box{
+            height: 400px;
+        }
+          @media (max-width: 768px) {
+        .box {
+            height: 200px;
+        }
+    }
+        
+        
+
+        
+        
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .box span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            color: #fff;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+            transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
+        }
+
+        .box:hover span {
+            top: 10px;
+            left: 10px;
+            transform: translate(0, 0);
+            font-size: 1em;
+        }
+
+        .box::after {
+            content: attr(data-hover-text);
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: #fff;
+            font-size: 1.2em;
+            opacity: 0;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 1.9);
+            transform: translateY(10px);
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            z-index: 1;
+        }
+
+        .box:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* .footer {
+            text-align: center;
+            padding: 10px;
+            color: #fff;
+            font-size: 1em;
+            margin-top: 20px;
+        } */
+    </style>
+</head>
+<body>
+    <header>Biology Arcade</header>
+    <div class="container">
+        <div data-hover-text="In this section, dive into the world of cell biology with engaging games like Crossword, Gravity, and Picture Quiz. Challenge yourself with a crossword puzzle focused on cell biology terms, test your knowledge in the gravity game by catching the correct answers, and identify key cell structures in the picture quiz." class="box box-game1" onclick="showMessage('cell')">
+            <span>Cell Biology</span>
+        </div>
+        <div data-hover-text="In this section, dive into the world of Clinical biology with engaging games like Crossword, Gravity, and Picture Quiz. Challenge yourself with a crossword puzzle focused on Clinical biology terms, test your knowledge in the gravity game by catching the correct answers." class="box box-game2" onclick="showMessage('Clinical')">
+            <span>Clinical Biology</span>
+        </div>
+        <div data-hover-text="In this section, explore ecology through fun games like Crossword, Gravity, and Picture Quiz. Solve ecology puzzles, catch the right answers in the gravity game, and identify ecosystems and species in the picture quiz. It's a fun way to learn about the environment!" class="box box-game3" onclick="showMessage('ecology')">
+            <span>Ecology</span>
+        </div>
+        <div data-hover-text="
+        In this section, learn about infectious diseases through interactive games like Crossword, Gravity, and Picture Quiz. Solve puzzles related to infectious diseases, test your knowledge by catching the correct answers in the gravity game, and identify disease-causing organisms and symptoms in the picture quiz. It's a fun way to understand the world of infectious diseases!" class="box box-game4" onclick="showMessage('Infectious')">
+            <span>Infectious Diseases</span>
+        </div>
+        <div data-hover-text="In this section, explore stress management through fun games like Crossword, Gravity, and Picture Quiz. Solve puzzles related to stress, test your knowledge by catching the right answers in the gravity game, and identify stress-relief techniques and causes in the picture quiz. It's an engaging way to learn about stress and how to manage it!" class="box box-game5" onclick="showMessage('stress')">
+            <span>Stress</span>
+        </div>
+    </div>
+    <div class="footer">
+        Challenge yourself with these fun Biology games!
+    </div>
+    
+</body>
+</html>

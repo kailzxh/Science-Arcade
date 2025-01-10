@@ -1,0 +1,36 @@
+.box-game1::before {
+    background-image: url('../public/pics/physics/Screenshot\ 2025-01-05\ 232903.png');
+}
+
+.box-game2::before {
+    background-image: url('../public/pics/physics/Screenshot\ 2025-01-05\ 232213.png');
+}
+
+.box-game3::before {
+    background-image: url('../public/pics/physics/Screenshot\ 2025-01-05\ 233317.png');
+}
+
+/* .box-game4::before {
+    background-image: url('game4-background.jpg');
+}
+
+.box-game5::before {
+    background-image: url('game5-background.jpg');
+} */
+.box::after {
+    content: attr(this is first game ); /* Use a data attribute for the hover text */
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 1em;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 3;
+}
+
+.box:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}

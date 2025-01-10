@@ -1,0 +1,19 @@
+.box-game1::before {
+    background-image: url('../public/pics/coding/code\ to\ exit.jpeg');
+}
+
+.box-game2::before {
+    background-image: url('../public/pics/coding/catch\ pokeman.jpeg');
+}
+
+.box-game3::before {
+    background-image: url('game3-background.jpg');
+}
+
+.box-game4::before {
+    background-image: url('game4-background.jpg');
+}
+
+.box-game5::before {
+    background-image: url('game5-background.jpg');
+}

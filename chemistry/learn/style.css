@@ -1,0 +1,102 @@
+i{font-size: 1.5em;color: midnightblue;}
+*{
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    font-size: 100%;
+    padding: 0px;margin: 0px;
+    background-color: whitesmoke;
+}
+input[type=search]{
+    border: none;
+    box-shadow: 1px 2px 2px cornflowerblue;
+    border-radius: 8px;
+    display: block;
+    margin: 2% auto;
+    width: 80%;
+    background-color: white;
+    background-image: url(image/chemix-1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;height: 30px;
+}
+input[type=search]:focus{
+    outline: none;
+}
+
+main{
+    margin-bottom: 15%;
+}
+
+.banner{background-color: midnightblue;
+    min-height: 5%;
+    margin: 0% 5%;
+    border-radius: 0px 0px 5px 5px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    color: white;
+}
+
+.flex-container1{
+    margin: 10% 5%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.box1{
+    padding: 2%;
+    margin: 2%;
+    border-radius: 5%;
+    width: 45%;
+    box-shadow: 1px 2px 3px;
+}
+
+.box1 > img{
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+.box1 > button, h2, p{
+    display: block;
+    width: 80%;
+    margin: 5% auto;
+}
+
+button{
+    background-color: cornflowerblue;
+    text-align: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+nav{
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    border-top: 2px solid cornflowerblue;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.box{
+    width: 25%;
+    text-align: center;
+    padding: 2%;
+}
+.box:hover{
+    background-color: cornflowerblue;
+}
+.box > a{
+    display: block;
+    width: 100%;
+}
+
+

@@ -1,0 +1,17 @@
+.box-game1::before {
+    background-image: url('../public/pics/maths/playwithnum.png');
+}
+
+
+
+.box-game3::before {
+    background-image: url('../public/pics/maths/box\ game.png');
+}
+
+.box-game2::before {
+    background-image: url('../public/pics/maths/math-game-master.jpg');
+}
+
+.box-game5::before {
+    background-image: url('../public/pics/maths/fill\ empty.png');
+}

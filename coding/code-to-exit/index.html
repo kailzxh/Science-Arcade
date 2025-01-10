@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="🕹️ Learn how to program with Code Arcade."
+    />
+    <meta
+      property="og:image"
+      content="https://remarkablegames.org/code-arcade/logo.png"
+    />
+
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!--
+      GitHub Corners. See https://github.com/remarkablemark/github-corners
+    -->
+    <% if (process.env.BUNDLE !== 'true') { %>
+    <!-- <script
+      src="https://unpkg.com/github-corners/dist/embed.min.js"
+      data-href="https://github.com/remarkablegames/code-arcade"
+      data-target="_blank"
+      async
+      defer
+    ></script> -->
+    <style>
+      .github-corner > svg {
+        opacity: 0.6;
+        transition: opacity 0.4s;
+      }
+      .github-corner:hover > svg {
+        opacity: 1;
+      }
+    </style>
+    <% } %>
+
+    <title>Code to exit</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to play this game.</noscript>
+
+    <main class="flex justify-center xl:center">
+      <div class="flex max-xl:hidden">
+        <h1 class="basis-1/2 self-end">Code Arcade</h1>
+        <div class="flex justify-between w-1/2">
+          <button class="btn-primary">► Run</button>
+          <button class="btn-tertiary">⟳ Restart</button>
+          <button class="btn-secondary">ⓘ Hint</button>
+        </div>
+      </div>
+
+      <div class="xl:flex">
+        <h1 class="xl:hidden">Code Arcade</h1>
+        <iframe></iframe>
+        <div id="editor"></div>
+        <div class="xl:hidden">
+          <button class="btn-primary">► Run</button>
+          <button class="btn-tertiary">⟳ Restart</button>
+          <button class="btn-secondary">ⓘ Hint</button>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="src/index.ts"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+      window['ga-disable-%VITE_GOOGLE_ANALYTICS_ID%'] = %DEV%;
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () {
+        dataLayer.push(arguments);
+      };
+      gtag('js', new Date());
+      gtag('config', '%VITE_GOOGLE_ANALYTICS_ID%');
+    </script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=%VITE_GOOGLE_ANALYTICS_ID%"
+    ></script>
+  </body>
+</html>

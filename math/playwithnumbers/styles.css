@@ -1,0 +1,23 @@
+.box-game1::before {
+    background-image: url('../../public/pics/maths/subtract.png');
+}
+
+.box-game2::before {
+    background-image: url('../../public/pics/maths/triplets.png');
+}
+
+.box-game3::before {
+    background-image: url('../../public/pics/maths/setanimal.png');
+}
+
+.box-game4::before {
+    background-image: url('../../public/pics/maths/setsize.png');
+}
+
+.box-game5::before {
+    background-image: url('../../public/pics/maths/addtion.png');
+}
+.box-game6::before {
+    background-image: url('../../public/pics/maths/triple\ memory.png');
+}
+

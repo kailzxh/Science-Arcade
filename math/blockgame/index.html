@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Box Wars</title>
+	</head>
+	<body>
+		<div style="background-color: #ffffff; color: #23234c; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 30px; border-radius: 10px;" id="rules">
+  
+			<h1 style="font-size: 2.5em; margin-bottom: 20px;">How to play?</h1>
+			
+			<div>
+				<p style="font-size: 1.5em; margin: 10px 0;">The goal is to destroy the correct boxes by choosing the right box with the correct number or operation (+, -, ×, ÷) to match the target output.</p>
+				<p style="font-size: 1.5em; margin: 10px 0;">Each round presents a target number and a set of possible numbers and operators.</p>
+				<p style="font-size: 1.5em; margin: 10px 0;">Select the right combination of numbers and operators to match the target.</p>
+				<p style="font-size: 1.5em; margin: 10px 0;">If you hit the correct box, you destroy other boxes matching the target expression.</p>
+				<p style="font-size: 1.5em; margin: 10px 0;">If you hit a wrong box, the game is over.</p>
+				<p style="font-size: 1.5em; margin: 10px 0;">There is no time limit for solving each challenge.</p>
+				<p style="font-size: 1.5em; margin: 10px 0;">The game continues until you make a wrong answer.</p>
+				<p style="font-size: 1.5em; margin: 10px 0;">You can restart the game after a wrong answer.</p>
+			  </div>
+			  
+			<button id="start-btn" style="background-color: #23234c; color: white; border: none; padding: 15px 30px; font-size: 1.2em; border-radius: 5px; cursor: pointer; margin-top: 20px; transition: background-color 0.3s;">
+			  Start Game
+			</button>
+		  </div>
+		<div id="settings">
+			<span>
+				<button id="Speed" ontouchstart="changeSettings(this)" onclick="changeSettings(this)">Speed: Slow</button>
+			</span>
+			<span>
+				<button id="Math" ontouchstart="changeSettings(this)" onclick="changeSettings(this)">Math: Add</button>
+			</span>
+			<span>
+				<button id="Numbers" ontouchstart="changeSettings(this)" onclick="changeSettings(this)">Numbers: Small</button>
+			</span>
+			<span>
+				<button id="Volume" ontouchstart="changeSettings(this)" onclick="changeSettings(this)">Volume: High</button>
+			</span>
+		</div>
+		
+
+		<style>
+			#start-btn {
+				font-size: 1.1em;
+				padding: 12px 25px;
+}
+			
+			body,input,button {
+				/* height: 100%;
+            margin: 0;
+            padding: 0; */
+			/* width: 100%; */
+				
+				font-size: 24px;
+				font-family: Tahoma;
+				background-color: black;
+				color: white;
+				/* -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none; */
+			}
+			#settings {
+				display: none;
+				position: absolute;
+				bottom: 0%;
+				left:30px;
+			}
+			#settings span {
+				width: 200px;
+			}
+			
+			
+			#playAgain {
+				font-size: 100px;
+				border: 2px solid white;
+				padding-left: 25px;
+				padding-right: 25px;
+				text-align: center;
+				border-radius: 25px 25px 25px 25px;
+				width: 800px;
+			}
+			#score {
+				font-size: 50px;
+			}
+		</style>
+		<script>
+			document.getElementById('start-btn').addEventListener('click', function() {
+			  // Remove the src attribute from the existing script tag
+			  const scriptTag = document.querySelector('script[src="math.js"]');
+			  if (scriptTag) {
+				scriptTag.parentElement.removeChild(scriptTag);
+			  }
+			  
+			  // Create a new script tag with the src set to math.js
+			  const newScriptTag = document.createElement('script');
+			  newScriptTag.src = 'math.js';
+			  document.body.appendChild(newScriptTag);
+		  
+			  // Remove display property from #settings to show the settings
+			  const settings = document.getElementById('settings');
+			  settings.style.display = 'block';
+
+			  const rules = document.getElementById("rules");
+			  rules.style.display ='none';
+			});
+		  </script>
+		<script id="addScript" style="display: none;" src="rules.js"></script>
+	</body>
+</html>

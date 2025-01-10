@@ -1,0 +1,11 @@
+.box-game1::before {
+    background-image: url('../../public/pics/biology/clinical\ bio\ crossword.jpeg');
+}
+
+.box-game2::before {
+    background-image: url('../../public/pics/biology/timer\ game.jpg');
+}
+
+.box-game3::before {
+    background-image: url('../../public/pics/biology/picturequiz.jpg');
+}
